@@ -48,14 +48,15 @@ class _HomePageState extends State<HomePage>{
               color: Colors.blue,
               fontSize: 20,
             ),),
-            new RaisedButton(
-              child: new Text("Click", style: new TextStyle(
-                color: Colors.white,
-              ),),
-              onPressed: _changeText,
-              color: Colors.red,
 
-            )
+            // new RaisedButton(
+            //   child: new Text("Click", style: new TextStyle(
+            //     color: Colors.white,
+            //   ),),
+            //   onPressed: _changeText,
+            //   color: Colors.red,
+            //
+            // )
           ],
         ),
       ),
@@ -68,7 +69,11 @@ class _HomePageState extends State<HomePage>{
       appBar: new AppBar(
         title: new Text("Home Page"),
       ),
-      body: _bodyWidget()
+      body: _bodyWidget(),
+      floatingActionButton: new FloatingActionButton(
+        child: new Icon(Icons.add),
+        onPressed: _changeText,
+      ),
     );
   }
 }
